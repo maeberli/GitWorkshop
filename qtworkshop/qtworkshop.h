@@ -19,6 +19,7 @@ public:
 
 private slots:
     void showAboutDialog();
+    void updateLCD(int newValue);
 
 private:
     Ui::QtWorkshop *ui;
