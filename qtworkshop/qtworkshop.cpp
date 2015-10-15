@@ -32,7 +32,8 @@ QtWorkshop::~QtWorkshop()
 
 void QtWorkshop::showAboutDialog()
 {
-    QString aboutText = tr("This application was implemented for a Git workshop") + "\n"
+    QString aboutText = tr("This application was implemented for a Git workshop") + "\n" + "\n"
+            + tr("Version: 1.0") + "\n" + "\n"
             + tr("Contributors:") + "\n-"
             + m_contributorList.join(",\n-");
 
