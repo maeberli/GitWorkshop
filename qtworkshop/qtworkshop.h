@@ -3,6 +3,7 @@
 
 #include <QMainWindow>
 #include <QStringList>
+#include <QPushButton>
 
 namespace Ui {
 class QtWorkshop;
@@ -23,6 +24,9 @@ private:
     Ui::QtWorkshop *ui;
 
     static QStringList m_contributorList;
+
+
+    void colorize(QPushButton *button);
 };
 
 #endif // QTWORKSHOP_H

@@ -21,6 +21,8 @@ QtWorkshop::QtWorkshop(QWidget *parent) :
             this, SLOT(close()));
     connect(this->ui->actionAbout, SIGNAL(triggered()),
             this, SLOT(showAboutDialog()));
+
+    colorize(this->ui->exitBtn);
 }
 
 QtWorkshop::~QtWorkshop()
@@ -35,4 +37,14 @@ void QtWorkshop::showAboutDialog()
             + m_contributorList.join(",\n-");
 
     QMessageBox::about(this, tr("Git workshop application"), aboutText);
+}
+
+void QtWorkshop::colorize(QPushButton *button)
+{
+    QPalette pal = button->palette();
+    pal.setBrush(QPalette::Button, QBrush(Qt::blue));
+
+    button->setAutoFillBackground(true);
+    button->setPalette(pal);
+    button->update();
 }
